@@ -12,7 +12,10 @@ const modalCancelButton = document.querySelector('.modal__footerButton--red');
 
 showModalBtn.addEventListener("click", ()=>{
     modalContainer.classList.add('body__modalContainer--active');
+    modal.focus();
 })
+
+
 
 modalClose.addEventListener("click", ()=>{
     modalContainer.classList.remove('body__modalContainer--active');

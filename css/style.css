@@ -116,7 +116,7 @@ header{
 @media screen and (max-width: 560px) {
     .body__modalContainer--active, .body__modalContainer  .modalContainer__modal{
       left: 0;
-      width: 100vw;
+      width: 100%;
     }
     
   }
