@@ -11,8 +11,8 @@ const modalOkeyButton = document.querySelector('.modal__footerButton--green');
 const modalCancelButton = document.querySelector('.modal__footerButton--red');
 
 showModalBtn.addEventListener("click", ()=>{
-    modalContainer.classList.add('body__modalContainer--active');
-    modal.focus();
+    modalContainer.classList.add('body__modalContainer--active','fadeOut');
+    modalContainer.focus();
 })
 
 
@@ -31,4 +31,6 @@ modalCancelButton.addEventListener("click", ()=>{
 
 modalContainer.addEventListener("click", ()=>{
     modalContainer.classList.remove('body__modalContainer--active');
+  
+
 })
