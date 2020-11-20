@@ -22,6 +22,7 @@ body .body__showModalBtn{
 }
 
 .body__modalContainer{
+    animation: fadeOut ease 1s;
     display: none;
     position: fixed;
     width: 100%;
@@ -32,16 +33,25 @@ body .body__showModalBtn{
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
     
-
 }   
 
+@keyframes fadeOut {
+    0% {opacity:1;}
+    100% {opacity:0;}
+    }
 
 
 .body__modalContainer--active{
     display: flex;
-    
+    animation: fadeIn ease 1s;
+    scroll-behavior: smooth;
 
 }   
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
 
 header{
     display: flex;
@@ -68,8 +78,8 @@ header{
     background-color: #fff;
     padding: 1rem;
     position: absolute;
-    left: 20rem;
-    top: 3rem;
+    left: 25%;
+    top: 3em;
     width: 50%;
   
 }
@@ -96,8 +106,17 @@ header{
 }
 .modal__footerButton--green{
     background-color: green;
+    
 }
 
 .modal__footerButton--red{
     background-color: red;
 }
+
+@media screen and (max-width: 560px) {
+    .body__modalContainer--active, .body__modalContainer  .modalContainer__modal{
+      left: 0;
+      width: 100vw;
+    }
+    
+  }
